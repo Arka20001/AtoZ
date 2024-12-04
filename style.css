@@ -15,8 +15,11 @@ body {
 }
 
 .container {
+    display: flex;
     width: 100%;
     height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -36,7 +39,7 @@ body {
     backdrop-filter: blur(5px);
     text-align: center;
     font-size: 1.2em;
-    margin-top: 45%;
+    top: 20px;
     z-index: 10;
     text-shadow: 0 0 20px #333;
 }
@@ -44,12 +47,14 @@ body {
 
 
 .burger  {
-    position: absolute;
+
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     font-size: 1.75em;
+    z-index: 1000;
     
 }
 
@@ -57,9 +62,9 @@ body {
     position: relative;
     -webkit-appearance: none;
     outline: none;
-    left: 46.25vh;
-    width: 60px;
-    height: 40px;
+    left: 40vh;
+    width: 70px;
+    height: 50px;
     z-index: 1000;
 }
 
@@ -67,7 +72,7 @@ body {
 .burger input::before {
     content: '';
     transition: .5s;
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     right: 20px;
@@ -93,7 +98,7 @@ body {
 .burger input::after {
     content: '';
     transition: .5s;
-    position: absolute;
+    position: fixed;
     right: 20px;
     top: 45px;
     width: 35px;
@@ -126,7 +131,7 @@ body {
     top: 0;
     z-index: 100;
     background-color: #333;
-    transform: translateY( -100vh);
+    transform: translateY( -200vh);
     transition: 1s;
     border-radius: 0 0 0 20px;
 }
@@ -155,6 +160,20 @@ body {
 }
 
 input:checked ~ .menu {
-    transform: translateY(1vh);
+    transform: translateY(2vh);
     transition: .5s;    
+}
+
+
+
+.video {
+    border-radius: 7.5%;
+    border-color: #5ecbe3;
+    border-width: 50px;
+}
+
+
+
+h3,h1 {
+color: #5ecbe3;
 }
