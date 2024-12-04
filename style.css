@@ -160,7 +160,7 @@ body {
 }
 
 input:checked ~ .menu {
-    transform: translateY(1.4vh);
+    transform: translateY(1vh);
     transition: .5s;    
 }
 
